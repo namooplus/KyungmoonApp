@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activity_padding">50dp</dimen>
+    <dimen name="inner_padding">30dp</dimen>
+    <dimen name="space_padding">10dp</dimen>
+
+</resources>

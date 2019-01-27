@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_padding"
+            android:text="경문고등학교"
+            android:textSize="30sp"
+            android:textColor="@color/text_dark_color"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Kyungmoon High School"
+            android:textSize="15sp"
+            android:textColor="@color/text_dark_color"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_padding"
+            android:layout_marginEnd="120dp"
+            android:text="이 버전은 개발자의 졸업으로 인해 기능이 최소화된 경문앱 최종 버전입니다."
+            android:textSize="12sp"
+            android:textColor="#C2A32A"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/space_padding"
+            android:layout_marginTop="@dimen/activity_padding"
+            android:text="급식 정보  >"
+            android:textColor="@color/text_dark_color"
+            android:textSize="16sp"
+            android:onClick="meal"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/space_padding"
+            android:layout_marginTop="@dimen/space_padding"
+            android:text="학사 일정  >"
+            android:textColor="@color/text_dark_color"
+            android:textSize="16sp"
+            android:onClick="calendar"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/space_padding"
+            android:layout_marginTop="@dimen/space_padding"
+            android:text="학교 소개  >"
+            android:textColor="@color/text_dark_color"
+            android:textSize="16sp"
+            android:onClick="school"/>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        app:srcCompat="@drawable/vector_about"
+        android:tint="@color/text_dark_color"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:padding="@dimen/space_padding"
+        android:layout_margin="@dimen/activity_padding"
+        android:layout_alignParentBottom="true"
+        android:onClick="about"/>
+
+    <ImageView
+        android:id="@+id/main_object"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/object_pencil"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
