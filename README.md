@@ -25,6 +25,13 @@
 
 - 아 튕긴다
   + 리뷰 혹은 아래의 건의용 이메일을 통해 문제사항을 보내주세요. 만약 어플리케이션이 중지될 경우 꼭 "보고" 버튼을 눌러 주세요.
+  
+## 라이센스
+아래의 라이브러리가 이 프로젝트에 사용되었습니다.
+- [Neis Api](https://github.com/agemor/neis-api)
+- [Material DateTime Picker](https://github.com/wdullaer/MaterialDateTimePicker)
+- [Universal Image Loader](https://github.com/nostra13/Android-Universal-Image-Loader)
+- [LicensesDialog](https://psdev.de/LicensesDialog/)
 
 ## 다운로드
 [플레이스토어](https://play.google.com/store/apps/details?id=nm.highschool.kyungmoon)
