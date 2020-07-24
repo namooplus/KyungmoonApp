@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!--머테리얼-->
+    <!--아이콘-->
+    <color name="ic_launcher_background">#FFFFFF</color>
 
+    <!--머테리얼-->
     <color name="colorPrimary">#f9f9f9</color>
     <color name="colorPrimaryDark">#f9f9f9</color>
     <color name="colorAccent">#2A9FC2</color>
 
     <!--배경-->
-
     <color name="background_color">#fafafa</color>
     <color name="card_color">#ffffff</color>
 
     <!--텍스트-->
-
     <color name="text_bright_color">#ffffff</color>
     <color name="text_dark_color">#333333</color>
 

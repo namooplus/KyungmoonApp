@@ -11,9 +11,8 @@
     <item>
 
         <bitmap
-            android:src="@mipmap/ic_launcher"
-            android:tileMode="disabled"
-            android:gravity="center" />
+            android:src="@drawable/ic_launcher"
+            android:gravity="center"/>
 
     </item>
 
