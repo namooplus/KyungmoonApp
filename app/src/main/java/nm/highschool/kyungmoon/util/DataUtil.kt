@@ -22,7 +22,7 @@ object DataUtil
 
         editor.apply()
     }
-    fun getString(name: String, location: String, defaultValue: String = ""): String = context.getSharedPreferences(location, Context.MODE_PRIVATE).getString(name, defaultValue)
+    fun getString(name: String, location: String, defaultValue: String = ""): String = context.getSharedPreferences(location, Context.MODE_PRIVATE).getString(name, defaultValue) ?: defaultValue
     fun getInt(name: String, location: String, defaultValue: Int = 0): Int = context.getSharedPreferences(location, Context.MODE_PRIVATE).getInt(name, defaultValue)
     fun getBoolean(name: String, location: String, defaultValue: Boolean = false): Boolean = context.getSharedPreferences(location, Context.MODE_PRIVATE).getBoolean(name, defaultValue)
 

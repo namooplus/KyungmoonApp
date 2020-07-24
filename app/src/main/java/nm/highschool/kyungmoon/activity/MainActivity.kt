@@ -1,6 +1,7 @@
 package nm.highschool.kyungmoon.activity
 
 import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
@@ -10,6 +11,7 @@ import android.view.View
 import android.widget.PopupMenu
 import de.psdev.licensesdialog.LicensesDialog
 import nm.highschool.kyungmoon.R
+import nm.highschool.kyungmoon.util.ActivityUtil
 
 class MainActivity: AppCompatActivity()
 {
@@ -19,17 +21,7 @@ class MainActivity: AppCompatActivity()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        initFlag()
-    }
-
-    //설정
-    private fun initFlag()
-    {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
-            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-
-        else
-            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+        ActivityUtil.initFlag(this, true)
     }
 
     //클릭 이벤트
@@ -57,7 +49,7 @@ class MainActivity: AppCompatActivity()
                 "경문고 홈페이지" ->
                 {
                     val intent = Intent(Intent.ACTION_VIEW)
-                    intent.data = Uri.parse("http://www.kyungmoon.hs.kr/index.do")
+                    intent.data = Uri.parse("http://kyungmoon.sen.hs.kr/index.do")
                     startActivity(intent)
                 }
                 "개발자 정보" ->
@@ -69,6 +61,12 @@ class MainActivity: AppCompatActivity()
                         setTitle("개발자 정보")
                         setView(layoutInflater.inflate(R.layout.dialog_about_layout, null))
                         setPositiveButton("확인", null)
+                        setNeutralButton("개발자 깃허브")
+                        { _, _ ->
+                            val intent = Intent(Intent.ACTION_VIEW)
+                            intent.data = Uri.parse("https://github.com/namooplus")
+                            startActivity(intent)
+                        }
                         show()
                     }
                 }

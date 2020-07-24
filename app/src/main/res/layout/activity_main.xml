@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    tools:context=".activity.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -37,7 +38,7 @@
             android:layout_marginEnd="120dp"
             android:text="이 버전은 개발자의 졸업으로 인해 기능이 최소화된 경문앱 최종 버전입니다."
             android:textSize="12sp"
-            android:textColor="#C2A32A"/>
+            android:textColor="@color/colorAccent"/>
 
         <Button
             android:layout_width="wrap_content"

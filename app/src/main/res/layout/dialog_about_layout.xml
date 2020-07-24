@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:text="나무"
-        android:textColor="#5e8dde"
+        android:textColor="#000000"
         android:textSize="50sp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp" />
@@ -18,7 +18,7 @@
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="경문고 2019년 졸업생 (강민서)"
+        android:text="강민서 (경문고 2019년 졸업생)"
         android:textSize="17sp"
         android:textColor="#555555"
         android:layout_gravity="center_horizontal"
@@ -33,6 +33,16 @@
         android:textColor="#DD555555"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/space_padding"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="그래도 생각날 때마다 간간히 업데이트하고 있어요 :)"
+        android:textSize="10sp"
+        android:textColor="@color/colorAccent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
         android:gravity="center"/>
 
 </LinearLayout>

@@ -8,6 +8,7 @@ import com.nostra13.universalimageloader.core.ImageLoader
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration
 import kotlinx.android.synthetic.main.activity_school.*
 import nm.highschool.kyungmoon.R
+import nm.highschool.kyungmoon.util.ActivityUtil
 
 class SchoolActivity: AppCompatActivity()
 {
@@ -18,7 +19,8 @@ class SchoolActivity: AppCompatActivity()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_school)
 
-        initFlag()
+        ActivityUtil.initFlag(this, true)
+
         initImage()
     }
     override fun finish()
@@ -28,25 +30,11 @@ class SchoolActivity: AppCompatActivity()
     }
 
     //설정
-    private fun initFlag()
-    {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
-            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-
-        else
-            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-    }
     private fun initImage()
     {
         val imageLoader = ImageLoader.getInstance()
         imageLoader.init(ImageLoaderConfiguration.createDefault(this))
         imageLoader.displayImage("drawable://" + R.drawable.icon_school, school_icon_viewer)
         imageLoader.displayImage("drawable://" + R.drawable.background_school, school_background_viewer)
-    }
-
-    //클릭이벤트
-    fun back(view: View)
-    {
-        finish()
     }
 }

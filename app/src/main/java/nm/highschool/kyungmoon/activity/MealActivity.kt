@@ -5,16 +5,16 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.os.AsyncTask
-import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog
 import kotlinx.android.synthetic.main.activity_meal.*
+import kr.go.neis.api.NEISException
+import kr.go.neis.api.School
 import nm.highschool.kyungmoon.R
-import nm.highschool.kyungmoon.school.School
-import nm.highschool.kyungmoon.school.SchoolException
+import nm.highschool.kyungmoon.util.ActivityUtil
 import nm.highschool.kyungmoon.util.DataUtil
 import java.util.*
 
@@ -31,7 +31,8 @@ class MealActivity: AppCompatActivity(), DatePickerDialog.OnDateSetListener
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_meal)
 
-        initFlag()
+        ActivityUtil.initFlag(this, true)
+
         initDate()
         initMeal()
     }
@@ -42,14 +43,6 @@ class MealActivity: AppCompatActivity(), DatePickerDialog.OnDateSetListener
     }
 
     //설정
-    private fun initFlag()
-    {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
-            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-
-        else
-            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-    }
     private fun initDate()
     {
         val calendar = Calendar.getInstance()
@@ -124,7 +117,7 @@ class MealActivity: AppCompatActivity(), DatePickerDialog.OnDateSetListener
     {
         val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         val clipData = ClipData.newPlainText("lunch", meal_meal_viewer.text.toString().removeAllegyInfo())
-        clipboardManager.primaryClip = clipData
+        clipboardManager.setPrimaryClip(clipData)
 
         Toast.makeText(this, "클립보드에 복사되었습니다.", Toast.LENGTH_SHORT).show()
     }
@@ -150,7 +143,7 @@ class MealActivity: AppCompatActivity(), DatePickerDialog.OnDateSetListener
                     index++
                 }
             }
-            catch (e: SchoolException)
+            catch (e: NEISException)
             {
                 e.printStackTrace()
 

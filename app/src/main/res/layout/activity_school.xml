@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/background_color"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    tools:context=".activity.SchoolActivity">
 
     <!--타이틀-->
 
@@ -65,8 +66,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="교훈"
-                    android:textColor="#53adca"
-                    android:textSize="18sp"/>
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -88,8 +89,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="교목"
-                    android:textColor="#53adca"
-                    android:textSize="18sp"/>
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -111,8 +112,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="교화"
-                    android:textColor="#53adca"
-                    android:textSize="18sp"/>
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -134,8 +135,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="학교 상징"
-                    android:textColor="#53adca"
-                    android:textSize="18sp"/>
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp"/>
 
                 <ImageView
                     android:id="@+id/school_icon_viewer"
@@ -155,8 +156,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="학교 전경"
-                    android:textColor="#53adca"
-                    android:textSize="18sp"/>
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp"/>
 
                 <ImageView
                     android:id="@+id/school_background_viewer"

@@ -79,15 +79,9 @@ class CalendarActivity: AppCompatActivity()
     private fun loadWeb()
     {
         if (CheckUtil.isNetworkAvailable)
-            calendar_webview.loadUrl("http://www.kyungmoon.hs.kr/72566/subMenu.do")
+            calendar_webview.loadUrl("http://kyungmoon.sen.hs.kr/72566/subMenu.do")
 
         else
             calendar_warning_view.visibility = View.VISIBLE
-    }
-
-    //클릭이벤트
-    fun back(view: View)
-    {
-        finish()
     }
 }
